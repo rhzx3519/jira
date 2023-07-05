@@ -24,3 +24,10 @@ yarn-error.log*
 
 # idea
 .idea/
+
+# husky
+.husky
+
+# prettier
+.prettierignore
+.prettierrc.json
