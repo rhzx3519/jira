@@ -47,6 +47,6 @@
     "lint-staged": "^13.2.3"
   },
   "lint-staged": {
-    "**/{js,css,ts,jsx,tsx}": "prettier --write --ignore-unknown"
+    "*.{js,css,ts,jsx,tsx}": ""
   }
 }
