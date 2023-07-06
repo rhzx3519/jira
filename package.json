@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "serve": "json-server --watch __json_server_mock__/db.json --port 4000"
+    "serve": "json-server --watch __json_server_mock__/db.json --port 4000 --middlewares __json_server_mock__/middleware.js"
   },
   "eslintConfig": {
     "extends": [
@@ -53,5 +53,8 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

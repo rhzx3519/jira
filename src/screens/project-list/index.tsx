@@ -3,16 +3,14 @@ import { List } from "./list";
 import { useEffect, useState } from "react";
 import * as qs from "qs";
 import { cleanObject, useDebounce, useMount } from "../utils";
-
-const apiUrl = process.env.REACT_APP_JIRA_API_URL;
+import { apiUrl } from "../const";
 
 export const ProjectListScreen = () => {
   const [param, setParam] = useState({
     name: "",
     personId: "",
   });
-  const debouncedParam = useDebounce(param, 2000);
-
+  const debouncedParam = useDebounce(param);
   const [list, setList] = useState([]);
   const [users, setUsers] = useState([]);
 
