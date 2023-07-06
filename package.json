@@ -10,6 +10,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "dotenv-cli": "^7.2.1",
+    "qs": "^6.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -21,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "serve": "json-server --watch __json_server_mock__/db.json --port 4000"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
+    "json-server": "^0.17.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.0"
   },
