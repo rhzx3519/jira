@@ -6,13 +6,14 @@ import { TsReactTest } from "./try-use-array";
 import { useAuth } from "./context/auth-context";
 import { AuthenticatedApp } from "./authenticated-app";
 import { UnauthenticatedApp } from "./unauthenticated-app";
+import { ConfigProvider } from "antd";
 
 function App() {
   const { user } = useAuth();
   return (
-    <div className="App">
+    <ConfigProvider theme={{ token: { colorPrimary: "00b96b", fontSize: 20 } }}>
       {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
-    </div>
+    </ConfigProvider>
   );
 }
 
